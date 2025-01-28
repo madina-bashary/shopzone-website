@@ -1,0 +1,492 @@
+<!DOCTYPE html> 
+<html> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="bootstrap_4/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="bootstrap_4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="shortcut icon" href="SNMZ_photos/logo.png" type="image/x-icon">
+    <title>ShopZone</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="padding: 0 30px; margin: 0; background-color: #f7f0e8">
+		<button class="navbar-toggler" id="nav-btn" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#" style="height: 80px; margin: 0;">
+            <img src="SNMZ_photos/logo.png" style="height: 65px; padding: 0; margin: 0;">
+        </a>
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav" style="margin: 0 20px; font-size: 115%;">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" id="nav-style">صفحه اصلی</a>
+                </li>
+                <li class="nav-item dropdown" >
+                    <a href="pages/category.html" class="nav-link dropdown-toggle" data-toggle="dropdown" id="nav-style">کتگوری اجناس</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/category.html" class="dropdown-item">لوازم خانه</a>
+                        <a href="pages/category.html" class="dropdown-item">Beauty and Personal Care</a>
+                        <a href="pages/category.html" class="dropdown-item">Customers Electronics</a>
+                        <a href="pages/category.html" class="dropdown-item">Fashion Accessories</a>
+                        <a href="pages/category.html" class="dropdown-item">Food</a>
+                        <a href="pages/category.html" class="dropdown-item">Jeweleries</a>
+                    </div>  
+                </li>
+                <li class="nav-item dropdown" >
+                    <a href="pages/category.html" class="nav-link dropdown-toggle" data-toggle="dropdown" id="nav-style">خریداری اجناس</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/buy-page.html" class="dropdown-item">خرید اجناس</a>
+                        <a  class="dropdown-item">اجناس خریداری شده</a>
+                    </div>  
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/balance.html" id="nav-style">بلانس</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="nav-style" data-toggle="modal" data-target="#about">درباره</a>
+                </li>
+            </ul>
+			<div class="search-box mr-auto" id="header-search-box" style="margin-right: 20px;">
+				<form method="get">
+					<input type="text" name="search" maxlength="40" placeholder="جستجو کنید...." required>
+					<button type="submit" class="search-button">
+						<i class="fa fa-search"></i>
+					</button>
+				</form>
+			</div> 
+        </div>  
+		<button type="button" data-toggle="collapse" data-target="#collapsibleProfile" id="profile">
+            <div class="profile-image">
+                
+            </div>
+        </button>
+        <div id="collapsibleProfile" style="float: left;">
+            <div class="profile-content">
+                <ul>
+                    <li><a href="pages/profile.html">پروفایل</a></li>
+                    <li style="border-top: 1px solid #1F4594;"><a href="pages/favorite.html">علایق <img src="SNMZ_photos/heart_outline.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="about" class="modal">
+        <div  class="modal-dialog modal-dialog-centered modal-lg">
+      	<div class="modal-content">
+          <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal" style="color: black; float:left;">&times;</button>
+              <h4 class="some-style" >Info</h4>
+
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-sm-12 col-md-3" style="text-align: center;"> 
+                      <img src="SNMZ_photos/logo.png" style="margin: 30px; width: 100%; position: relative; top: 30%;">
+                  </div>
+                  <div class="col-md-1" style="border-right: 1px solid black;">
+                  </div>
+                  <div class="modal-contact col-sm-11 col-md-7" style="margin: 20px; margin-left: 20px; text-align: justify;">
+                      <p style="color: black;"> SNMZ Team specialized on all Web Development pieces and creating databases. We stick together to bring facilities in people’s life by using technologies in the country. It’s a critical need to use technology in the society, we want to familiarize people with technology by bring technology to their lives. And this is going to be the first step! </p>
+                      <p style="color: black;">
+                        Location:  Mazar-i-Sharif, Afghanistan <br>
+                        Email:  madinabashary@gmail.com  <br>
+                        Phone:  +93783430712 <br> <br> <br>
+                        <a href="http://www.facebook.com/snmz.shopping"><i class="fab fa-facebook-f"></i></a>
+                        <a href="http://m.me/snmz.shopping"><i class="fab fa-facebook-messenger"></i></a>
+                        <a href="https://www.instagram.com/snmz.shopping"><i class="fab fa-instagram"></i></a>
+                        <a href="http://api.whatsapp.com/send?phone=+93772722000"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://pin.it/2tBBX80"><i class="fab fa-pinterest-p"></i></a>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      	</div>
+ 	 </div>
+	</div>
+	<div class="banner">
+		<div class="row" style="width: 80%; margin: 0 auto; text-align: center; align-items: center; padding: 80px 0;">
+            <div class="col-md-5 col-sm-12" id="tagline-image" style="padding: 0; margin: 0;">
+				<img src="SNMZ_photos/images-PhotoRoom (1).png" alt="BEST Quality Shopping">
+				<img src="SNMZ_photos/images (2)-PhotoRoom.png" alt="BEST Quality Shopping" style="background-color: #f7f0e8;">
+			</div>
+			<div class="col-lg-6 col-sm-12" style="margin: 0; padding: 0;">
+				<div class="title" style="margin-bottom: 30px;">
+					<h2 style="padding-bottom: 7px;">مکانِ برای رسیدن به خواسته هایتان !!!</h2>
+					<h5>رضایت شما٫ افتخار ماست...</h5>
+				</div>
+				<div class="search-box">
+					<form method="get"> 
+						<input type="text" name="search" maxlength="60" placeholder="جستجو کنید..." required>
+						<button type="submit" class="search-button">
+							<i class="fa fa-search"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+
+    <div class="container p-3 bg-white" style="margin-bottom: 50px;" id="slide-show">
+        <h3 style="text-align: center; padding-bottom: 10px; color: #0c1442;">اجناس که بیشترین فروشات را در ماه داشته!</h3>
+       
+        <div class="carousel slide best-sold-item" data-ride="carousel" id="slider">
+            <ul class="carousel-indicators">
+                <li data-target="#slide-show" data-slide-to="0" class="active"></li>
+                <li data-target="#slide-show" data-slide-to="1"></li>
+                <li data-target="#slide-show" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+
+                <!-- for making more slides just copy this block of code -->
+
+
+                <div class="carousel-item active">
+                    <img src="SNMZ_photos/kindle.jpg" alt="Best Selling Item This Month">
+                    <div class="details">
+                        <h4>Kindle - With a Build-in Front Light - Black - Ad- Supported</h4>
+                        <h5 class="item-details">Brand: Kindle</h5>
+                        <h5 class="item-details">Verified  <i class="fas fa-check"></i></h5>   
+                        <h5 class="item-price">Price: 1000 AF</h5>
+                        <div class="star-widget">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="buy-button" onclick="location.href='pages/buy-page.html'">برای خرید کلیک کنید>></button>
+                    </div>
+                </div>
+
+                <!-- here -->
+
+                <div class="carousel-item">
+                    <img src="SNMZ_photos/HD-wallpaper-apple-macbook-pro-laptop-background-ultra-computers-hardware-laptop-apple-modern-design-device-technology-macintosh-macbook.jpg" alt="Best Selling Item This Month">
+                    
+                    <div class="details">
+                        <h4>Kindle - With a Build-in Front Light - Black - Ad- Supported</h4>
+                        <h5 class="item-details">Brand: Kindle</h5>
+                        <h5 class="item-details">Verified  <i class="fas fa-check"></i></h5>   
+                        <h5 class="item-price">Price: 1000 AF</h5>
+                        <div class="star-widget">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="buy-button" onclick="location.href='pages/buy-page.html'">برای خرید کلیک کنید>></button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="SNMZ_photos/craft-supplies-knitting-creative-handmade-yellow-top-view-set-organizing-diy-elements-border-design-craft-159372040.jpg" alt="Best Selling Item This Month">
+                    
+                    <div class="details">
+                        <h4>Kindle - With a Build-in Front Light - Black - Ad- Supported</h4>
+                        <h5 class="item-details">Brand: Kindle</h5>
+                        <h5 class="item-details">Verified  <i class="fas fa-check"></i></h5>   
+                        <h5 class="item-price">Price: 1000 AF</h5>
+                        <div class="star-widget">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="buy-button" onclick="location.href='pages/buy-page.html'">برای خرید کلیک کنید>></button>
+                    </div>
+                </div>
+
+            </div>
+            <a href="#slider" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+            <a href="#slider" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+        </div>
+            
+        </div>
+    </div>
+
+    <div class="customer-numbers" style="direction: ltr;">
+		<div class="row">
+            <div class=	"box">
+                <img src="SNMZ_photos/customer.png" alt="Customers">
+                <h4>23,340</h4>
+            </div>
+            <div class=	"box">
+                <img src="SNMZ_photos/eye.png" alt="visitors">
+                <h4>30,458</h4>  
+            </div>
+            <div class=	"box">
+                <img src="SNMZ_photos/star_30px.png" alt="Rates">
+                <h4>2,500</h4>
+            </div>
+            <div class=	"box">
+                <img src="SNMZ_photos/sell.png" alt="Sold Items">
+                <h4>4,230</h4>
+            </div>
+		</div>
+    </div>
+
+    
+
+    <div class="container categories bg-white" style="width: 80%; margin-bottom: 10px;">
+        <h2 style="text-align: center; color: #0c1442;">کتگوری اجناس</h2>
+		<div class="row">
+			<div class=	"card bg-white col-lg-3 col-md-6 col-sm-12">
+                <div class="card-body">
+                    <a href="pages/category.html">
+                        <img src="SNMZ_photos/download (2).jfif" class="card-img-top">
+                        <h5 class="card-title">Customer Electronics</h5> 
+                    </a>
+                    <div class="star-widget">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+			</div>
+            <div class=	"card bg-white col-lg-3 col-md-6 col-sm-12">
+                <div class="card-body">
+                    <a href="pages/category.html">
+                        <img src="SNMZ_photos/images (7).jfif" class="card-img-top">
+                        <h5 class="card-title">Books</h5> 
+                    </a>
+                    <div class="star-widget">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+			</div>
+            <div class=	"card bg-white col-lg-3 col-md-6 col-sm-12">
+                <div class="card-body">
+                    <a href="pages/category.html">
+                        <img src="SNMZ_photos/images (6).jfif" class="card-img-top">
+                        <h5 class="card-title">Baby Accessories</h5> 
+                    </a>
+                    <div class="star-widget">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+			</div>
+            <div class=	"card bg-white col-lg-3 col-md-6 col-sm-12">
+                <div class="card-body">
+                    <a href="pages/category.html">
+                        <img src="SNMZ_photos/images (10).jfif" class="card-img-top">
+                        <h5 class="card-title">T-Shirts</h5> 
+                    </a>
+                    <div class="star-widget">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+			</div>
+            <div class=	"card bg-white col-lg-3 col-md-6 col-sm-12">
+                <div class="card-body">
+                    <a href="pages/category.html">
+                        <img src="SNMZ_photos/images (1).jfif" class="card-img-top">
+                        <h5 class="card-title">Dress</h5> 
+                    </a>
+                    <div class="star-widget">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+			</div>
+            <div class=	"card bg-white col-lg-3 col-md-6 col-sm-12">
+                <div class="card-body">
+                    <a href="pages/category.html">
+                        <img src="SNMZ_photos/category-item-1.webp" class="card-img-top">
+                        <h5 class="card-title">Fashion Accessories</h5> 
+                    </a>
+                    <div class="star-widget">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+			</div>
+            <div class=	"card bg-white col-lg-3 col-md-6 col-sm-12">
+                <div class="card-body">
+                    <a href="pages/category.html">
+                        <img src="SNMZ_photos/images (9).jfif" class="card-img-top">
+                        <h5 class="card-title">Work Tools</h5> 
+                    </a>
+                    <div class="star-widget">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+			</div>
+            <div class=	"card bg-white col-lg-3 col-md-6 col-sm-12">
+                <div class="card-body">
+                    <a href="pages/category.html">
+                        <img src="SNMZ_photos/download (5).jfif" class="card-img-top">
+                        <h5 class="card-title">Men Accessories</h5> 
+                    </a>
+                    <div class="star-widget">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+			</div>
+
+		</div>
+    </div>
+
+    <div class="shopping" style="background-color: #f7f0e8; text-align: center; padding: 90px 20px;">
+        <div class="wrapper">
+            <h2 style="font-weight: 700; padding-bottom: 5px;">خلاقیت و نوآوری را با ما تجربه کنید...</h2>
+            <h4 style="font-weight: 500; font-size: 20px;">ما برایتان هرآنچه می پسندید را عرضه مینمایم !</h4>
+            <div class="search-box">
+                <form action="search.php" method="get">
+                    <input type="text" name="search" maxlength="60" placeholder="جستجو کنید..." required style="background-color: #fff; width: 300px;">
+                    <button type="submit" class="search-button" style="background-color: #fff;">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>  
+    
+    
+
+  <footer
+      style="background-color: #0c1442; margin: 0; padding: 0; direction: ltr"
+      class="container-fluid"
+    >
+      <div class="map" style="padding: 0">
+        <iframe
+          src="https://maps.google.com/?cid=13535520773696608911&entry=gps"
+          frameborder="0"
+          style="border: 0px"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+      <div class="footer-container" style="padding: 20px">
+        <div
+          class="row contact-us"
+          style="color: white; padding-top: 10px; width: 80%; margin: 0 auto"
+        >
+          <div class="our-location col-sm-12 col-lg-4 col-md-12 d-flex">
+            <div>
+              <img
+                src="SNMZ_photos/location.png"
+                alt=""
+                style="margin-top: 6px"
+              />
+            </div>
+            <div>
+              <h5>آدرس ما</h5>
+              <p>مزارشریف٬ بلخ٬ افغانستان</p>
+            </div>
+          </div>
+
+          <div class="call-us col-sm-12 col-lg-4 col-md-12 d-flex">
+            <div>
+              <img src="SNMZ_photos/call.png" alt="" />
+            </div>
+            <div>
+              <a href="tel:+93772722000">شماره تماس: 0783430712</a><br />
+              <a href="tel:+93772722000">شماره تماس: 0779595849</a>
+            </div>
+          </div>
+          <div class="email-us col-sm-12 col-lg-4 col-md-12 d-flex">
+            <div>
+              <img
+                src="SNMZ_photos/email.png"
+                alt=""
+                style="margin-top: 10px"
+              />
+            </div>
+            <div>
+              <h5>ایمیل آدرس ما</h5>
+              <a href="mailto: madinabashary@gmail.com"
+                >madinabashary@gmail.com</a
+              ><br />
+            </div>
+          </div>
+        </div>
+
+        <hr style="border-bottom: 1px solid white" />
+
+        <div class="row social-links" style="text-align: center">
+          <div class="col-sm-12 col-md-12">
+            <a href="http://www.facebook.com/snmz.shopping"
+              ><img src="SNMZ_photos/facebook.png" alt=""
+            /></a>
+            <a href="http://m.me/snmz.shopping"
+              ><img src="SNMZ_photos/messager.png" alt=""
+            /></a>
+            <a href="https://www.instagram.com/snmz.shopping"
+              ><img src="SNMZ_photos/instagram.png" alt=""
+            /></a>
+            <a href="http://api.whatsapp.com/send?phone=+93783430712"
+              ><img src="SNMZ_photos/whatsapp.png" alt=""
+            /></a>
+            <a href="https://pin.it/2tBBX80"
+              ><img src="SNMZ_photos/pinterest.png" alt=""
+            /></a>
+          </div>
+        </div>
+
+        <hr style="border-bottom: 1px solid white" />
+
+        <div class="row" style="text-align: center">
+          <div class="col-sm-12 col-md-12">
+            <p style="color: white; font-size: 13px !important">
+              &copy; 2022 All Copyrights Reserved To <b>Madina Bashary</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+		$(document).ready(function(){
+			$("#profile").click(function(){
+				$("#collapsibleProfile").toggle();
+				
+			})
+		});
+   </script>
+</body>
+</html>

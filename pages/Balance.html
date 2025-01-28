@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Balance</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- logo -->
+    <link rel="shortcut icon" href="../SNMZ_photos/logo.png" type="image/x-icon">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="../CSS/Record.css">
+    <!-- CSS view link -->
+    <link rel="stylesheet" href="../CSS/View.css">
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="../bootstrap_4/css/bootstrap.min.css">
+    <!-- Bootstrap JS link-->
+    <script src="../bootstrap_4/js/bootstrap.min.js"></script>
+    <!-- graph link -->
+    <script src="../bootstrap_4/js/Chart.js"></script>
+    <!-- Jqurey link -->
+    <script src="../js/jquery.js"></script>
+</head>
+
+<style>
+    label {
+        color: white;
+    }
+    .chartBox {
+        width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        background: #f7f0e8;
+    }
+</style>
+
+<body style="background-color: #f7f0e8; padding: 60px 40px;">
+    <!-- first row for title -->
+    <div class="row" style="text-align: center;">
+        <div class="col-md-12">
+          <div class="titlebody">
+            <div class="title">
+              <span id="title">BALANCE</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- second row for searching -->
+    <div class="box box-info" id="box">
+        <div class="box-header">
+            <div class="row" id="search">
+              <div class="btn-group col-md-8" style="float:left">
+                <div class="col-md-6">
+                   <label for="date-man">From Date</label>
+                  <input type="date" placeholder="From Date" style="width: 100%; margin: 2px;" id="date-man">
+                </div>
+                <div class="col-md-6">
+                  <label for="to-date-man">To Date</label>
+                  <input type="date" placeholder="To Date" style="width: 100%; margin: 2px;" id="to-date-man">
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+   <section class="content container-fluid" style="background-color: #1F4594; padding: 30px 20px; margin-bottom: 50px;">
+    <!-- second row for form content -->
+   <div class="row">
+     <div class="col-md-12">
+       <form action="#" method="POST" style="padding: 12px;" class="needs-validation">
+        <div class="row">
+            <!-- first col -->
+           <div class="col-md-4">
+                <div class="form-group">
+                <label for="invest">Total Investment</label>
+                <input type="text" class="form-control" id="invest" placeholder="Total Investment" name="invest">
+                </div>
+ 
+                <div class="form-group">
+                <label for="revenue">Revenue</label>
+                <input type="text" class="form-control" id="revenue" placeholder="Revenue" name="revenue">
+                </div>
+            </div>
+ 
+           <!-- second col -->
+           <div class="col-md-4">
+            <div class="form-group">
+                <label for="damage">Damage</label>
+                <input type="text" class="form-control" id="damage" placeholder="Damage" name="damage">
+              </div>
+ 
+              <div class="form-group">
+                <label for="bought">Total Bought Items</label>
+                <input type="text" class="form-control" id="bought" placeholder="Total Bought Items" name="bought">
+              </div>
+           </div>
+ 
+           <!-- third col -->
+           <div class="col-md-4">
+            <div class="form-group">
+                <label for="sold">Total Sold Items</label>
+                <input type="text" class="form-control" id="sold" placeholder="Total Sold Items" name="sold">
+              </div>
+
+              <div class="form-group">
+                <label for="remain">Total Remaining Items</label>
+                <input type="text" class="form-control" id="remain" placeholder="Total Remaining Items" name="remain">
+              </div>
+           </div>
+ 
+         </div>
+        
+       </form>
+     </div>
+   </div>
+    </section>
+
+    <!-- balance graph -->
+    <div class="row" style="text-align: center; margin-top: 10px;">
+      <div class="col-md-12">
+        <div class="titlebody">
+          <div class="title">
+            <span id="title">BALANCE EXPLAINATION GRAPH</span>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- graph -->
+  <div class="chartCard">
+    <div class="chartBox col-md-10 col-sm-12" style="margin: auto; width: 100%; height: auto;">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+</body>
+
+<script>
+  // graph codes 
+  const data = {
+      labels: ['Total Investment', 'Revenue', 'Damage', 'Total Bought', 'Total Sold', 'Total Remaining'],
+      datasets: [{
+        label: 'Total Investment',
+        data: [18, 12, 6, 9, 12, 3],
+        backgroundColor: [
+          'rgba(54, 162, 255, 0.2)',
+          'rgba(75, 255, 192, 0.2)',
+          'rgba(252, 5, 5, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(252, 76, 4, 0.2)'
+        ],
+        borderColor: [
+          'rgba(54, 162, 255, 1)',
+          'rgba(75, 255, 192, 1)',
+          'rgba(252, 5, 5, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(252, 76, 4, 1)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+  // for password visibility
+  const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function() {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.getAttribute("type", type);
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+  // function for date
+  $(document).ready(() => {
+          $('#date-man').datepicker({
+              changeMonth: true,
+              changeYear: true
+          });
+      });
+  
+      $(document).ready(() => {
+          $('#to-date-man').datepicker({
+              changeMonth: true,
+              changeYear: true
+          });
+      });
+
+  // Disable form submissions if there are invalid fields
+  (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Get the forms we want to add validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+</script>
+
+</html>
